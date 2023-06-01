@@ -1,17 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <counter></counter>
+  <hr />
+  {{ count }}
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import Counter from "@/components/Counter.vue"
+import { useStore } from "vuex";
+import { computed } from 'vue';
+const store = useStore();
+const count = computed(() => store.state.count);
 </script>
 
 <style>
