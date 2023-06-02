@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
-
+import users from "./users";
+import products from "./products"
 export const store = createStore({
     state() {
         return {
@@ -24,5 +25,9 @@ export const store = createStore({
         increaseCount(context, count) {
             context.commit('increase', count);
         }
+    },
+    modules: {
+        users,
+        products,
     }
 });
