@@ -2,6 +2,8 @@
   <counter></counter>
   <hr />
   {{ count }}
+  <hr />
+  {{ oddOrEven }}
 </template>
 
 <script setup>
@@ -10,6 +12,7 @@ import { useStore } from "vuex";
 import { computed } from 'vue';
 const store = useStore();
 const count = computed(() => store.state.count);
+const oddOrEven = computed(() => store.getters.oddOrEvent);
 </script>
 
 <style>
