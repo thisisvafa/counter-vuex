@@ -12,6 +12,7 @@ const store = useStore();
 const count = computed(() => store.state.count);
 function increase() {
     // store.commit("increase", 4);
-    store.commit("increase", 1);
+    // store.commit("increase", 1);
+    store.dispatch("increaseCount", 5);
 }
 </script>

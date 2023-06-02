@@ -20,4 +20,9 @@ export const store = createStore({
             state.count += count;
         }
     },
+    actions: {
+        increaseCount(context, count) {
+            context.commit('increase', count);
+        }
+    }
 });
